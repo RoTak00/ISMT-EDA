@@ -2,17 +2,19 @@ public class LLMain
 {
     public static void main(String[] args)
     {
-        LinkedList<String> l = new LinkedList<String>();
+        LinkedList<Integer> l = new LinkedList<Integer>();
 
-        l.addFirst("a");
-        l.addFirst("b");
-        l.addFirst("c");
+        for(int i = 8; i > 0; i--)
+        {
+            l.addFirst(i);
+        }
 
-        l.print();
+        System.out.println("l.size: " + l.getSize());
+        l.removeFirst();
+        l.removeIndex(3);
 
-        System.out.println("-----------------");
-       System.out.printf("found b at index %d\n", l.indexOf("b")) ;
-
+        int index = l.indexOf(6);
+        System.out.println("index: " + index);
        
 
         l.print();
